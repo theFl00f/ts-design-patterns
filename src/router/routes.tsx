@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import { AbstractFactoryPage, HomePage } from '../pages';
+import { AbstractFactoryPage, AdapterPage, HomePage } from '../pages';
 
 export const ROUTES: Pick<RouteObject, 'path' | 'element' | 'id'>[] = [
   {
@@ -11,6 +11,11 @@ export const ROUTES: Pick<RouteObject, 'path' | 'element' | 'id'>[] = [
     path: '/abstract-factory',
     element: <AbstractFactoryPage />,
     id: 'Abstract Factory',
+  },
+  {
+    path: '/adapter',
+    element: <AdapterPage />,
+    id: 'Adapter',
   },
 ];
 
