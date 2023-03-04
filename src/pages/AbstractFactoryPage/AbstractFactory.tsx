@@ -1,11 +1,5 @@
 import { Logger } from '../../util';
 
-class AbstractError extends Error {
-  constructor() {
-    super('Abstract method!');
-  }
-}
-
 // Stuff our factory makes
 export class Animal {
   speak(): string {
