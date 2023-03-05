@@ -1,11 +1,5 @@
 import { Logger } from '../../util';
 
-class InterfaceError extends Error {
-  constructor() {
-    super('Interface error');
-  }
-}
-
 // Defined Interface
 export class Shape {
   logger: Logger;

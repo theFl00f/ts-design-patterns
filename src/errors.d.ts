@@ -3,3 +3,9 @@ class AbstractError extends Error {
     super('Abstract method!');
   }
 }
+
+class InterfaceError extends Error {
+  constructor() {
+    super('Interface error');
+  }
+}
