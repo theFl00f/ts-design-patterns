@@ -3,6 +3,7 @@ import {
   AbstractFactoryPage,
   AdapterPage,
   BridgePage,
+  BuilderPage,
   HomePage,
 } from '../pages';
 
@@ -27,6 +28,11 @@ export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
       path: '/bridge',
       element: <BridgePage />,
       id: 'Bridge',
+    },
+    {
+      path: '/builder',
+      element: <BuilderPage />,
+      id: 'Builder',
     },
   ];
 
