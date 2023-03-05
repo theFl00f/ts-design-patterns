@@ -44,30 +44,19 @@ export class Car {
   }
 }
 
-export class Adapter<Object> {
+type AdaptedMethodType<Object extends Cat | Dog | Human | Car> = (
+  args: Adapter<Object>['args']
+) => string;
+
+export class Adapter<Object extends Cat | Dog | Human | Car> {
   name: string;
   args: unknown[];
-  adaptedMethod: (args: unknown[]) => string;
+  adaptedMethod: AdaptedMethodType<Object>;
 
-  constructor(
-    obj: Object,
-    adaptedMethod: 'bark' | 'meow' | 'speak' | 'makeNoise',
-    ...args: unknown[]
-  ) {
-    if (
-      !(
-        obj instanceof Dog ||
-        obj instanceof Cat ||
-        obj instanceof Human ||
-        obj instanceof Car
-      )
-    ) {
-      throw new Error('Adapter failed: Unsupported object');
-    }
+  constructor(obj: Object, adaptedMethod: keyof Object, ...args: unknown[]) {
     this.name = obj.name;
     this.args = args;
-    // @ts-ignore
-    this.adaptedMethod = obj[adaptedMethod];
+    this.adaptedMethod = obj[adaptedMethod] as AdaptedMethodType<Object>;
   }
 
   makeNoise() {

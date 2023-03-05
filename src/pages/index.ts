@@ -8,3 +8,4 @@ export { DecoratorPage } from './DecoratorPage';
 export { FacadePage } from './FacadePage';
 export { FactoryMethodPage } from './FactoryMethodPage';
 export { HomePage } from './HomePage';
+export { IteratorPage } from './IteratorPage';
