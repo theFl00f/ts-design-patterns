@@ -10,6 +10,7 @@ import {
   FacadePage,
   FactoryMethodPage,
   HomePage,
+  IteratorPage,
 } from '../pages';
 
 export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
@@ -63,6 +64,11 @@ export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
       path: '/factory-method',
       element: <FactoryMethodPage />,
       id: 'Factory Method',
+    },
+    {
+      path: '/iterator',
+      element: <IteratorPage />,
+      id: 'Iterator',
     },
   ];
 
