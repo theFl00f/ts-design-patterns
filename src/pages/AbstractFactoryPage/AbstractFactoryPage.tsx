@@ -2,9 +2,7 @@ import { FC, Fragment } from 'react';
 import { LogRenderer } from '../../util';
 import { CatFactory, DogFactory, Petshop } from './AbstractFactory';
 
-interface Props {}
-
-const AbstractFactoryPage: FC<Props> = () => {
+const AbstractFactoryPage: FC = () => {
   const dogShop = new Petshop(new DogFactory());
   const catShop = new Petshop(new CatFactory());
   dogShop.showPet();
