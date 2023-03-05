@@ -5,9 +5,8 @@ interface Props {
 }
 
 const LogRenderer: FC<Props> = ({ messages }) => {
-  console.log({ messages });
   return (
-    <ul>
+    <ul style={{ whiteSpace: 'pre-wrap' }}>
       {messages.map((message, index) => (
         <li key={`logger=${index + 1}`}>{message}</li>
       ))}
