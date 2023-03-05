@@ -5,4 +5,5 @@ export { BuilderPage } from './BuilderPage';
 export { CommandPage } from './CommandPage';
 export { CompositePage } from './CompositePage';
 export { DecoratorPage } from './DecoratorPage';
+export { FacadePage } from './FacadePage';
 export { HomePage } from './HomePage';
