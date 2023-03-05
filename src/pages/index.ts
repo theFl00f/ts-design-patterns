@@ -6,4 +6,5 @@ export { CommandPage } from './CommandPage';
 export { CompositePage } from './CompositePage';
 export { DecoratorPage } from './DecoratorPage';
 export { FacadePage } from './FacadePage';
+export { FactoryMethodPage } from './FactoryMethodPage';
 export { HomePage } from './HomePage';
