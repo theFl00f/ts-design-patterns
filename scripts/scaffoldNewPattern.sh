@@ -11,7 +11,9 @@ touch $folderName/$index.ts
 
 # Add some basic boilerplate
 cat > $folderName/$pageComponent.tsx << ENDOFFILE
-const $pageComponent = () => {
+import { FC } from "react"
+
+const $pageComponent: FC = () => {
   return (
 
   )
