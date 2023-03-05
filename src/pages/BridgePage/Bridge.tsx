@@ -1,7 +1,6 @@
-// Refined Abstraction
-
 import { Logger } from '../../util';
 
+// Refined Abstraction
 class DrawingAPI {
   logger: Logger;
   constructor() {
