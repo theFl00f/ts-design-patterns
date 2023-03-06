@@ -10,3 +10,4 @@ export { FactoryMethodPage } from './FactoryMethodPage';
 export { HomePage } from './HomePage';
 export { IteratorPage } from './IteratorPage';
 export { MementoPage } from './MementoPage';
+export { MVCPage } from './MVCPage';
