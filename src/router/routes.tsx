@@ -16,6 +16,7 @@ import {
   ObserverPage,
   PrototypePage,
   ProxyPage,
+  PublishSubscribePage,
 } from '../pages';
 
 export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
@@ -99,6 +100,11 @@ export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
       path: '/proxy',
       element: <ProxyPage />,
       id: 'Proxy',
+    },
+    {
+      path: 'publish-subscribe',
+      element: <PublishSubscribePage />,
+      id: 'Publish-Subscribe (PubSub)',
     },
   ];
 

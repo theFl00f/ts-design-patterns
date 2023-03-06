@@ -34,6 +34,7 @@ export class ProxyCar extends Car {
   constructor() {
     super();
     this.car = new Car();
+    this.logger = this.car.logger;
   }
 
   startEngine(): void {
@@ -45,7 +46,7 @@ export class ProxyCar extends Car {
   }
 
   hitBreak(): void {
-    this.car.hitBreak;
+    this.car.hitBreak();
   }
 
   parkCar(): void {
