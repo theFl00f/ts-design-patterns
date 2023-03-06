@@ -9,3 +9,4 @@ export { FacadePage } from './FacadePage';
 export { FactoryMethodPage } from './FactoryMethodPage';
 export { HomePage } from './HomePage';
 export { IteratorPage } from './IteratorPage';
+export { MementoPage } from './MementoPage';
