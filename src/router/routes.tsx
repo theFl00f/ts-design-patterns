@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import * as Pages from '../pages';
+import Pages from '../pages';
 
 export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
   [

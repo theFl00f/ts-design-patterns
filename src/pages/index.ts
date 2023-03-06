@@ -1,19 +1,41 @@
-export { AbstractFactoryPage } from './AbstractFactoryPage';
-export { AdapterPage } from './AdapterPage';
-export { BridgePage } from './BridgePage';
-export { BuilderPage } from './BuilderPage';
-export { CommandPage } from './CommandPage';
-export { CompositePage } from './CompositePage';
-export { DecoratorPage } from './DecoratorPage';
-export { FacadePage } from './FacadePage';
-export { FactoryMethodPage } from './FactoryMethodPage';
-export { HomePage } from './HomePage';
-export { IteratorPage } from './IteratorPage';
-export { MementoPage } from './MementoPage';
-export { MVCPage } from './MVCPage';
-export { ObserverPage } from './ObserverPage';
-export { PrototypePage } from './PrototypePage';
-export { ProxyPage } from './ProxyPage';
-export { PublishSubscribePage } from './PublishSubscribePage';
-export { StrategyPage } from './StrategyPage';
-export { TemplatePage } from './TemplatePage';
+import { AbstractFactoryPage } from './AbstractFactoryPage';
+import { AdapterPage } from './AdapterPage';
+import { BridgePage } from './BridgePage';
+import { BuilderPage } from './BuilderPage';
+import { CommandPage } from './CommandPage';
+import { CompositePage } from './CompositePage';
+import { DecoratorPage } from './DecoratorPage';
+import { FacadePage } from './FacadePage';
+import { FactoryMethodPage } from './FactoryMethodPage';
+import { HomePage } from './HomePage';
+import { IteratorPage } from './IteratorPage';
+import { MementoPage } from './MementoPage';
+import { MVCPage } from './MVCPage';
+import { ObserverPage } from './ObserverPage';
+import { PrototypePage } from './PrototypePage';
+import { ProxyPage } from './ProxyPage';
+import { PublishSubscribePage } from './PublishSubscribePage';
+import { StrategyPage } from './StrategyPage';
+import { TemplatePage } from './TemplatePage';
+
+export default {
+  AbstractFactoryPage,
+  AdapterPage,
+  BridgePage,
+  BuilderPage,
+  CommandPage,
+  CompositePage,
+  DecoratorPage,
+  FacadePage,
+  FactoryMethodPage,
+  HomePage,
+  IteratorPage,
+  MementoPage,
+  MVCPage,
+  ObserverPage,
+  PrototypePage,
+  ProxyPage,
+  PublishSubscribePage,
+  StrategyPage,
+  TemplatePage,
+};
