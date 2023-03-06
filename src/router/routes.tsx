@@ -14,6 +14,7 @@ import {
   MementoPage,
   MVCPage,
   ObserverPage,
+  PrototypePage,
 } from '../pages';
 
 export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
@@ -87,6 +88,11 @@ export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
       path: '/observer',
       element: <ObserverPage />,
       id: 'Observer',
+    },
+    {
+      path: '/prototype',
+      element: <PrototypePage />,
+      id: 'Prototype',
     },
   ];
 
