@@ -12,3 +12,4 @@ export { IteratorPage } from './IteratorPage';
 export { MementoPage } from './MementoPage';
 export { MVCPage } from './MVCPage';
 export { ObserverPage } from './ObserverPage';
+export { PrototypePage } from './PrototypePage';
