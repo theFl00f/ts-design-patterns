@@ -15,6 +15,7 @@ import {
   MVCPage,
   ObserverPage,
   PrototypePage,
+  ProxyPage,
 } from '../pages';
 
 export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
@@ -93,6 +94,11 @@ export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
       path: '/prototype',
       element: <PrototypePage />,
       id: 'Prototype',
+    },
+    {
+      path: '/proxy',
+      element: <ProxyPage />,
+      id: 'Proxy',
     },
   ];
 

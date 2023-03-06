@@ -13,3 +13,4 @@ export { MementoPage } from './MementoPage';
 export { MVCPage } from './MVCPage';
 export { ObserverPage } from './ObserverPage';
 export { PrototypePage } from './PrototypePage';
+export { ProxyPage } from './ProxyPage';
