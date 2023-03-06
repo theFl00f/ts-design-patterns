@@ -93,6 +93,11 @@ export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
       element: <Pages.StrategyPage />,
       id: 'Strategy',
     },
+    {
+      path: '/template',
+      element: <Pages.TemplatePage />,
+      id: 'Template',
+    },
   ];
 
 export default ROUTES;
