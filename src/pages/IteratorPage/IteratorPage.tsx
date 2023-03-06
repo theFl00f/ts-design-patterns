@@ -17,7 +17,7 @@ const iteratorLog = <Type extends unknown>(
     case 'isDone':
       return logger.log(iterator.isDone() ? 'Iterator is done!' : 'Not yet!');
     default:
-      throw new Error('Unknown iteratorAction provided');
+      throw new UnknownError('iteratorAction');
   }
 };
 

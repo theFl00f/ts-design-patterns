@@ -74,7 +74,7 @@ export class Director {
 
   private validateBuilder(builder: Builder | null | undefined) {
     if (!(builder instanceof Builder)) {
-      throw new Error('Builder has not been constructed');
+      throw new UndefinedError('Builder');
     }
     return builder;
   }
@@ -89,7 +89,7 @@ export class Director {
   getBuilding() {
     const builder = this.validateBuilder(this.builder);
     if (!builder.building) {
-      throw new Error('Builder has not constructed building yet');
+      throw new UndefinedError('builder.building');
     }
     return builder.building;
   }
