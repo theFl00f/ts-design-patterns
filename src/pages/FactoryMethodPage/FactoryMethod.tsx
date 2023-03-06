@@ -51,7 +51,7 @@ export class ShapeFactory {
       case ShapeType.Circle:
         return new Circle();
       default:
-        throw new Error('Unsupported shapeType');
+        throw new UnknownError('shapeType');
     }
   }
 }

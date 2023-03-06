@@ -10,7 +10,7 @@ export class Student {
 
   get Number() {
     if (!this.rollNumber) {
-      throw new Error('Roll number not set.');
+      throw new UndefinedError('Roll number');
     }
     return this.rollNumber;
   }
@@ -21,7 +21,7 @@ export class Student {
 
   get Name() {
     if (!this.name) {
-      throw new Error('Name not set.');
+      throw new UndefinedError('Name');
     }
     return this.name;
   }
