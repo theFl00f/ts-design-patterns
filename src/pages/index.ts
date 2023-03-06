@@ -15,3 +15,4 @@ export { ObserverPage } from './ObserverPage';
 export { PrototypePage } from './PrototypePage';
 export { ProxyPage } from './ProxyPage';
 export { PublishSubscribePage } from './PublishSubscribePage';
+export { StrategyPage } from './StrategyPage';
