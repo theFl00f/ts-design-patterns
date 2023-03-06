@@ -16,3 +16,4 @@ export { PrototypePage } from './PrototypePage';
 export { ProxyPage } from './ProxyPage';
 export { PublishSubscribePage } from './PublishSubscribePage';
 export { StrategyPage } from './StrategyPage';
+export { TemplatePage } from './TemplatePage';
