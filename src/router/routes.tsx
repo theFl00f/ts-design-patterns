@@ -1,109 +1,91 @@
 import { RouteObject } from 'react-router-dom';
-import {
-  AbstractFactoryPage,
-  AdapterPage,
-  BridgePage,
-  BuilderPage,
-  CommandPage,
-  CompositePage,
-  DecoratorPage,
-  FacadePage,
-  FactoryMethodPage,
-  HomePage,
-  IteratorPage,
-  MementoPage,
-  MVCPage,
-  ObserverPage,
-  PrototypePage,
-  ProxyPage,
-  PublishSubscribePage,
-} from '../pages';
+import * as Pages from '../pages';
 
 export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
   [
     {
       path: '/',
-      element: <HomePage />,
+      element: <Pages.HomePage />,
       id: 'Home',
     },
     {
       path: '/abstract-factory',
-      element: <AbstractFactoryPage />,
+      element: <Pages.AbstractFactoryPage />,
       id: 'Abstract Factory',
     },
     {
       path: '/adapter',
-      element: <AdapterPage />,
+      element: <Pages.AdapterPage />,
       id: 'Adapter',
     },
     {
       path: '/bridge',
-      element: <BridgePage />,
+      element: <Pages.BridgePage />,
       id: 'Bridge',
     },
     {
       path: '/builder',
-      element: <BuilderPage />,
+      element: <Pages.BuilderPage />,
       id: 'Builder',
     },
     {
       path: '/command',
-      element: <CommandPage />,
+      element: <Pages.CommandPage />,
       id: 'Command',
     },
     {
       path: '/composite',
-      element: <CompositePage />,
+      element: <Pages.CompositePage />,
       id: 'Composite',
     },
     {
       path: '/decorator',
-      element: <DecoratorPage />,
+      element: <Pages.DecoratorPage />,
       id: 'Decorator',
     },
     {
       path: '/facade',
-      element: <FacadePage />,
+      element: <Pages.FacadePage />,
       id: 'Facade',
     },
     {
       path: '/factory-method',
-      element: <FactoryMethodPage />,
+      element: <Pages.FactoryMethodPage />,
       id: 'Factory Method',
     },
     {
       path: '/iterator',
-      element: <IteratorPage />,
+      element: <Pages.IteratorPage />,
       id: 'Iterator',
     },
     {
       path: '/memento',
-      element: <MementoPage />,
+      element: <Pages.MementoPage />,
       id: 'Memento',
     },
     {
       path: '/mvc-pattern',
-      element: <MVCPage />,
+      element: <Pages.MVCPage />,
       id: 'MVC Pattern',
     },
     {
       path: '/observer',
-      element: <ObserverPage />,
+      element: <Pages.ObserverPage />,
       id: 'Observer',
     },
     {
       path: '/prototype',
-      element: <PrototypePage />,
+      element: <Pages.PrototypePage />,
       id: 'Prototype',
     },
     {
       path: '/proxy',
-      element: <ProxyPage />,
+      element: <Pages.ProxyPage />,
       id: 'Proxy',
     },
     {
-      path: 'publish-subscribe',
-      element: <PublishSubscribePage />,
+      path: '/publish-subscribe',
+      element: <Pages.PublishSubscribePage />,
       id: 'Publish-Subscribe (PubSub)',
     },
   ];
