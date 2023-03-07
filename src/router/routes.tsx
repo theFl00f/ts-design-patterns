@@ -1,5 +1,6 @@
 import { RouteObject } from 'react-router-dom';
 import Pages from '../pages';
+import { PatternLayout } from '../util';
 
 export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
   [
@@ -10,97 +11,173 @@ export const ROUTES: Required<Pick<RouteObject, 'path' | 'element' | 'id'>>[] =
     },
     {
       path: '/abstract-factory',
-      element: <Pages.AbstractFactoryPage />,
+      element: (
+        <PatternLayout>
+          <Pages.AbstractFactoryPage />
+        </PatternLayout>
+      ),
       id: 'Abstract Factory',
     },
     {
       path: '/adapter',
-      element: <Pages.AdapterPage />,
+      element: (
+        <PatternLayout>
+          <Pages.AdapterPage />
+        </PatternLayout>
+      ),
       id: 'Adapter',
     },
     {
       path: '/bridge',
-      element: <Pages.BridgePage />,
+      element: (
+        <PatternLayout>
+          <Pages.BridgePage />
+        </PatternLayout>
+      ),
       id: 'Bridge',
     },
     {
       path: '/builder',
-      element: <Pages.BuilderPage />,
+      element: (
+        <PatternLayout>
+          <Pages.BuilderPage />
+        </PatternLayout>
+      ),
       id: 'Builder',
     },
     {
       path: '/command',
-      element: <Pages.CommandPage />,
+      element: (
+        <PatternLayout>
+          <Pages.CommandPage />
+        </PatternLayout>
+      ),
       id: 'Command',
     },
     {
       path: '/composite',
-      element: <Pages.CompositePage />,
+      element: (
+        <PatternLayout>
+          <Pages.CompositePage />
+        </PatternLayout>
+      ),
       id: 'Composite',
     },
     {
       path: '/decorator',
-      element: <Pages.DecoratorPage />,
+      element: (
+        <PatternLayout>
+          <Pages.DecoratorPage />
+        </PatternLayout>
+      ),
       id: 'Decorator',
     },
     {
       path: '/facade',
-      element: <Pages.FacadePage />,
+      element: (
+        <PatternLayout>
+          <Pages.FacadePage />
+        </PatternLayout>
+      ),
       id: 'Facade',
     },
     {
       path: '/factory-method',
-      element: <Pages.FactoryMethodPage />,
+      element: (
+        <PatternLayout>
+          <Pages.FactoryMethodPage />
+        </PatternLayout>
+      ),
       id: 'Factory Method',
     },
     {
       path: '/iterator',
-      element: <Pages.IteratorPage />,
+      element: (
+        <PatternLayout>
+          <Pages.IteratorPage />
+        </PatternLayout>
+      ),
       id: 'Iterator',
     },
     {
       path: '/memento',
-      element: <Pages.MementoPage />,
+      element: (
+        <PatternLayout>
+          <Pages.MementoPage />
+        </PatternLayout>
+      ),
       id: 'Memento',
     },
     {
       path: '/mvc-pattern',
-      element: <Pages.MVCPage />,
+      element: (
+        <PatternLayout>
+          <Pages.MVCPage />
+        </PatternLayout>
+      ),
       id: 'MVC Pattern',
     },
     {
       path: '/observer',
-      element: <Pages.ObserverPage />,
+      element: (
+        <PatternLayout>
+          <Pages.ObserverPage />
+        </PatternLayout>
+      ),
       id: 'Observer',
     },
     {
       path: '/prototype',
-      element: <Pages.PrototypePage />,
+      element: (
+        <PatternLayout>
+          <Pages.PrototypePage />
+        </PatternLayout>
+      ),
       id: 'Prototype',
     },
     {
       path: '/proxy',
-      element: <Pages.ProxyPage />,
+      element: (
+        <PatternLayout>
+          <Pages.ProxyPage />
+        </PatternLayout>
+      ),
       id: 'Proxy',
     },
     {
       path: '/publish-subscribe',
-      element: <Pages.PublishSubscribePage />,
+      element: (
+        <PatternLayout>
+          <Pages.PublishSubscribePage />
+        </PatternLayout>
+      ),
       id: 'Publish-Subscribe (PubSub)',
     },
     {
       path: '/strategy',
-      element: <Pages.StrategyPage />,
+      element: (
+        <PatternLayout>
+          <Pages.StrategyPage />
+        </PatternLayout>
+      ),
       id: 'Strategy',
     },
     {
       path: '/template',
-      element: <Pages.TemplatePage />,
+      element: (
+        <PatternLayout>
+          <Pages.TemplatePage />
+        </PatternLayout>
+      ),
       id: 'Template',
     },
     {
       path: '/visitor',
-      element: <Pages.VisitorPage />,
+      element: (
+        <PatternLayout>
+          <Pages.VisitorPage />
+        </PatternLayout>
+      ),
       id: 'Visitor',
     },
   ];

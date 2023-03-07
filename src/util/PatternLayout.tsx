@@ -1,17 +1,14 @@
-import { FC } from 'react';
-import Logger from './Logger';
-import LogRenderer from './LogRenderer';
+import { FC, ReactElement } from 'react';
 
 interface Props {
-  pattern: {
-    logger: Logger;
-  };
+  children: ReactElement;
 }
 
-const PatternLayout: FC<Props> = ({ pattern }) => {
+const PatternLayout: FC<Props> = ({ children }) => {
   return (
     <div>
-      <LogRenderer messages={pattern.logger.logs} />
+      <a href="/">&#11013; Back</a>
+      {children}
     </div>
   );
 };
