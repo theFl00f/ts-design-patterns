@@ -17,6 +17,7 @@ import { ProxyPage } from './ProxyPage';
 import { PublishSubscribePage } from './PublishSubscribePage';
 import { StrategyPage } from './StrategyPage';
 import { TemplatePage } from './TemplatePage';
+import { VisitorPage } from './VisitorPage';
 
 export default {
   AbstractFactoryPage,
@@ -38,4 +39,5 @@ export default {
   PublishSubscribePage,
   StrategyPage,
   TemplatePage,
+  VisitorPage,
 };
