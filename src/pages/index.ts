@@ -16,6 +16,7 @@ import { PrototypePage } from './PrototypePage';
 import { ProxyPage } from './ProxyPage';
 import { PublishSubscribePage } from './PublishSubscribePage';
 import { SimpleFactoryPage } from './SimpleFactoryPage';
+import { SingletonPage } from './SingletonPage';
 import { StrategyPage } from './StrategyPage';
 import { TemplatePage } from './TemplatePage';
 import { VisitorPage } from './VisitorPage';
@@ -42,4 +43,5 @@ export default {
   TemplatePage,
   VisitorPage,
   SimpleFactoryPage,
+  SingletonPage,
 };
