@@ -219,6 +219,16 @@ export const ROUTES: RouteType[] = [
     id: 'Simple Factory',
     patternType: 'Creational',
   },
+  {
+    path: '/singleton',
+    element: (
+      <PatternLayout>
+        <Pages.SingletonPage />
+      </PatternLayout>
+    ),
+    id: 'Singleton',
+    patternType: 'Creational',
+  },
 ];
 
 export default ROUTES;
