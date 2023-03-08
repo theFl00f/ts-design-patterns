@@ -209,6 +209,16 @@ export const ROUTES: RouteType[] = [
     id: 'Visitor',
     patternType: 'Behavioural',
   },
+  {
+    path: '/simple-factory',
+    element: (
+      <PatternLayout>
+        <Pages.SimpleFactoryPage />
+      </PatternLayout>
+    ),
+    id: 'Simple Factory',
+    patternType: 'Creational',
+  },
 ];
 
 export default ROUTES;
