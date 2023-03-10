@@ -259,6 +259,16 @@ export const ROUTES: RouteType[] = [
     id: 'Mediator',
     patternType: 'Behavioural',
   },
+  {
+    path: '/state',
+    element: (
+      <PatternLayout>
+        <Pages.StatePage />
+      </PatternLayout>
+    ),
+    id: 'State',
+    patternType: 'Behavioural',
+  },
 ];
 
 export default ROUTES;
