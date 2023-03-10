@@ -7,6 +7,7 @@ import { CompositePage } from './CompositePage';
 import { DecoratorPage } from './DecoratorPage';
 import { FacadePage } from './FacadePage';
 import { FactoryMethodPage } from './FactoryMethodPage';
+import { FlyweightPage } from './FlyweightPage';
 import { HomePage } from './HomePage';
 import { IteratorPage } from './IteratorPage';
 import { MementoPage } from './MementoPage';
@@ -44,4 +45,5 @@ export default {
   VisitorPage,
   SimpleFactoryPage,
   SingletonPage,
+  FlyweightPage,
 };
