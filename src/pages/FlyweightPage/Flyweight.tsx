@@ -93,13 +93,11 @@ export class TeaShop {
   }
 
   serve() {
-    console.log(this.orders);
     toPairs(this.orders)
       .filter(([, tea]) => !isNil(tea))
-      .map(([number, tea]) => {
-        console.log({ tea });
-        this.logger.log(`Serving ${tea.name} to table #${number}`);
-      });
+      .map(([number, tea]) =>
+        this.logger.log(`Serving ${tea.name} to table #${number}`)
+      );
     this.orders = [];
   }
 }
