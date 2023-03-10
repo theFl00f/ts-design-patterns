@@ -239,6 +239,16 @@ export const ROUTES: RouteType[] = [
     id: 'Flyweight',
     patternType: 'Structural',
   },
+  {
+    path: '/chain-of-responsibility',
+    element: (
+      <PatternLayout>
+        <Pages.ChainOfResponsibilityPage />
+      </PatternLayout>
+    ),
+    id: 'Chain of Responsibility',
+    patternType: 'Behavioural',
+  },
 ];
 
 export default ROUTES;

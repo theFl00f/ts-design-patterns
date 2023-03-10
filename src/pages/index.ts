@@ -2,6 +2,7 @@ import { AbstractFactoryPage } from './AbstractFactoryPage';
 import { AdapterPage } from './AdapterPage';
 import { BridgePage } from './BridgePage';
 import { BuilderPage } from './BuilderPage';
+import { ChainOfResponsibilityPage } from './ChainOfResponsibilityPage';
 import { CommandPage } from './CommandPage';
 import { CompositePage } from './CompositePage';
 import { DecoratorPage } from './DecoratorPage';
@@ -46,4 +47,5 @@ export default {
   SimpleFactoryPage,
   SingletonPage,
   FlyweightPage,
+  ChainOfResponsibilityPage,
 };
