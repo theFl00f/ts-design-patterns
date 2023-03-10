@@ -20,6 +20,7 @@ import { ProxyPage } from './ProxyPage';
 import { PublishSubscribePage } from './PublishSubscribePage';
 import { SimpleFactoryPage } from './SimpleFactoryPage';
 import { SingletonPage } from './SingletonPage';
+import { StatePage } from './StatePage';
 import { StrategyPage } from './StrategyPage';
 import { TemplatePage } from './TemplatePage';
 import { VisitorPage } from './VisitorPage';
@@ -50,4 +51,5 @@ export default {
   FlyweightPage,
   ChainOfResponsibilityPage,
   MediatorPage,
+  StatePage,
 };
