@@ -1,4 +1,4 @@
-import { Logger } from '../../util';
+import { AbstractError, Logger, UndefinedError } from '../../util';
 
 export class Observer {
   logger: Logger;

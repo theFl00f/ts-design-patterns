@@ -1,4 +1,4 @@
-import { Logger } from '../../util';
+import { AbstractError, Logger } from '../../util';
 
 // Stuff our factory makes
 export class Animal {
