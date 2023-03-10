@@ -249,6 +249,16 @@ export const ROUTES: RouteType[] = [
     id: 'Chain of Responsibility',
     patternType: 'Behavioural',
   },
+  {
+    path: '/mediator',
+    element: (
+      <PatternLayout>
+        <Pages.MediatorPage />
+      </PatternLayout>
+    ),
+    id: 'Mediator',
+    patternType: 'Behavioural',
+  },
 ];
 
 export default ROUTES;
