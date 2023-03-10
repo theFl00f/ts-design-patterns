@@ -11,6 +11,7 @@ import { FactoryMethodPage } from './FactoryMethodPage';
 import { FlyweightPage } from './FlyweightPage';
 import { HomePage } from './HomePage';
 import { IteratorPage } from './IteratorPage';
+import { MediatorPage } from './MediatorPage';
 import { MementoPage } from './MementoPage';
 import { MVCPage } from './MVCPage';
 import { ObserverPage } from './ObserverPage';
@@ -48,4 +49,5 @@ export default {
   SingletonPage,
   FlyweightPage,
   ChainOfResponsibilityPage,
+  MediatorPage,
 };
