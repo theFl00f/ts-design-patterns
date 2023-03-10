@@ -1,3 +1,5 @@
+import { AbstractError } from '../../util';
+
 export class Strategy {
   doOperation(num1: Int, num2: Int): number {
     throw new AbstractError();

@@ -229,6 +229,16 @@ export const ROUTES: RouteType[] = [
     id: 'Singleton',
     patternType: 'Creational',
   },
+  {
+    path: '/flyweight',
+    element: (
+      <PatternLayout>
+        <Pages.FlyweightPage />
+      </PatternLayout>
+    ),
+    id: 'Flyweight',
+    patternType: 'Structural',
+  },
 ];
 
 export default ROUTES;

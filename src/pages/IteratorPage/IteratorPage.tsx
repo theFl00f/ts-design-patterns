@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Logger, LogRenderer } from '../../util';
+import { Logger, LogRenderer, UnknownError } from '../../util';
 import { Aggregate, ConcreteIterator, IteratorActions } from './Iterator';
 
 const iteratorLog = <Type extends unknown>(

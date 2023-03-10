@@ -1,4 +1,4 @@
-import { Logger } from '../../util';
+import { AbstractError, Logger } from '../../util';
 
 export class Receiver {
   logger: Logger;

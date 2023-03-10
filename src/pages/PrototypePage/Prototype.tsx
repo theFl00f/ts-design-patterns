@@ -1,3 +1,5 @@
+import { AbstractError } from '../../util';
+
 export class Prototype {
   constructor() {}
   doClone(): Prototype {

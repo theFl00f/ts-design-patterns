@@ -1,4 +1,4 @@
-import { Logger } from '../../util';
+import { InterfaceError, Logger, UnknownError } from '../../util';
 
 // Defined Interface
 export class Shape {

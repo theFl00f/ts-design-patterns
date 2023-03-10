@@ -1,3 +1,5 @@
+import { UnknownError } from '../../util';
+
 export enum UserType {
   User = 'user',
   Customer = 'customer',

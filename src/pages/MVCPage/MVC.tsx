@@ -1,4 +1,4 @@
-import { Logger } from '../../util';
+import { Logger, UndefinedError } from '../../util';
 
 export class Student {
   private rollNumber?: number;
