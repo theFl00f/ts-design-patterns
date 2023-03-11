@@ -1,15 +1,13 @@
-import { InterfaceError, Logger } from '../../util';
+import { Logger } from '../../util';
 
 // Defined Interface
-export class Shape {
+export abstract class Shape {
   logger: Logger;
   constructor() {
     this.logger = new Logger();
   }
 
-  draw() {
-    throw new InterfaceError();
-  }
+  abstract draw(): void;
 }
 
 // Concrete Implementors
@@ -28,8 +26,8 @@ export class Rectangle extends Shape {
 }
 
 // Abstract class
-export class ShapeDecorator extends Shape {
-  decoratedShape: Shape;
+export abstract class ShapeDecorator extends Shape {
+  protected decoratedShape: Shape;
   constructor(decoratedShape: Shape) {
     super();
     this.decoratedShape = decoratedShape;
@@ -43,7 +41,7 @@ export class ShapeDecorator extends Shape {
 
 // Concrete implementor of Abstract class
 export class RedShapeDecorator extends ShapeDecorator {
-  redDecoratedShape: Shape;
+  private redDecoratedShape: Shape;
   constructor(decoratedShape: Shape) {
     super(decoratedShape);
     this.redDecoratedShape = decoratedShape;
