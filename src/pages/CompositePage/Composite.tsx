@@ -1,8 +1,8 @@
 export class Employee {
   subordinates: Employee[];
   name: string;
-  department: string;
-  salary: Int;
+  private department: string;
+  private salary: Int;
   constructor(name: string, department: string, salary: Int) {
     this.subordinates = [];
     this.name = name;
@@ -20,6 +20,10 @@ export class Employee {
     if (index > -1) {
       this.subordinates.splice(index, 1);
     }
+  }
+
+  toString() {
+    return `name: ${this.name}, department: ${this.department}, salary: ${this.salary}`;
   }
 
   get Subordinates() {
