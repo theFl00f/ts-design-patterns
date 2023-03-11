@@ -33,7 +33,7 @@ export class Originator {
 }
 
 export class Caretaker {
-  mementoList: Memento[];
+  private mementoList: Memento[];
   constructor() {
     this.mementoList = [];
   }
