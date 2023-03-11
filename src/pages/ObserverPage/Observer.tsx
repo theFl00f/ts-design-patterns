@@ -1,22 +1,17 @@
-import { AbstractError, Logger, UndefinedError } from '../../util';
+import { Logger, UndefinedError } from '../../util';
 
-export class Observer {
+export abstract class Observer {
   logger: Logger;
   constructor() {
     this.logger = new Logger();
   }
 
-  notify() {
-    throw new AbstractError();
-  }
-
-  toString(): string {
-    throw new AbstractError();
-  }
+  abstract notify(): void;
+  abstract toString(): string;
 }
 
 export class Subject {
-  observers: Observer[];
+  protected observers: Observer[];
   logger: Logger;
   constructor() {
     this.observers = [];
@@ -55,9 +50,9 @@ export class ConcreteSubject extends Subject {
 }
 
 export class ConcreteObserver extends Observer {
-  subject: ConcreteSubject;
-  name: string;
-  state?: number;
+  protected subject: ConcreteSubject;
+  protected name: string;
+  protected state?: number;
   constructor(subject: ConcreteSubject, name: string) {
     super();
     this.logger = subject.logger;

@@ -1,9 +1,7 @@
-import { AbstractError, Logger } from '../../util';
+import { Logger } from '../../util';
 
-export class ComputerPart {
-  accept(computerPartVisitor: ComputerPartVisitor) {
-    throw new AbstractError();
-  }
+export abstract class ComputerPart {
+  abstract accept(computerPartVisitor: ComputerPartVisitor): void;
 }
 
 export class Keyboard extends ComputerPart {
@@ -37,27 +35,16 @@ export class Computer extends ComputerPart {
   }
 }
 
-export class ComputerPartVisitor {
+export abstract class ComputerPartVisitor {
   logger: Logger;
   constructor() {
     this.logger = new Logger();
   }
 
-  visitComputer(computer: Computer) {
-    throw new AbstractError();
-  }
-
-  visitMouse(mouse: Mouse) {
-    throw new AbstractError();
-  }
-
-  visitKeyboard(keyboard: Keyboard) {
-    throw new AbstractError();
-  }
-
-  visitMonitor(monitor: Monitor) {
-    throw new AbstractError();
-  }
+  abstract visitComputer(computer: Computer): void;
+  abstract visitMouse(mouse: Mouse): void;
+  abstract visitKeyboard(keyboard: Keyboard): void;
+  abstract visitMonitor(monitor: Monitor): void;
 }
 
 export class ComputerPartDisplayVisitor extends ComputerPartVisitor {

@@ -20,6 +20,7 @@ const StrategyPage: FC = () => {
   logger.log(
     `Multiply operation output: ${contextMultiply.executeStrategy(5, 10)}`
   );
+
   return <LogRenderer messages={logger.logs} />;
 };
 

@@ -1,9 +1,5 @@
-import { AbstractError } from '../../util';
-
-export class Strategy {
-  doOperation(num1: Int, num2: Int): number {
-    throw new AbstractError();
-  }
+export interface Strategy {
+  doOperation(num1: Int, num2: Int): number;
 }
 
 export class Context {
@@ -17,19 +13,19 @@ export class Context {
   }
 }
 
-export class OperationAdd extends Strategy {
+export class OperationAdd implements Strategy {
   doOperation(num1: number, num2: number): number {
     return num1 + num2;
   }
 }
 
-export class OperationSubtract extends Strategy {
+export class OperationSubtract implements Strategy {
   doOperation(num1: number, num2: number): number {
     return num1 - num2;
   }
 }
 
-export class OperationMultiply extends Strategy {
+export class OperationMultiply implements Strategy {
   doOperation(num1: number, num2: number): number {
     return num1 * num2;
   }

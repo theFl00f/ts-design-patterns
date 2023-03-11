@@ -1,16 +1,11 @@
-import { AbstractError } from '../../util';
-
-export class Prototype {
-  constructor() {}
-  doClone(): Prototype {
-    throw new AbstractError();
-  }
+export interface Prototype {
+  doClone(): Prototype;
+  toString(): string;
 }
 
-export class Person extends Prototype {
-  surname: string;
+export class Person implements Prototype {
+  protected surname: string;
   constructor(surname: string) {
-    super();
     this.surname = surname;
   }
 
@@ -23,10 +18,9 @@ export class Person extends Prototype {
   }
 }
 
-export class Dog extends Prototype {
-  sound: string;
+export class Dog implements Prototype {
+  protected sound: string;
   constructor(sound: string) {
-    super();
     this.sound = sound;
   }
 
