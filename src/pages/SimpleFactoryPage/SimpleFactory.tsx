@@ -7,9 +7,9 @@ export enum UserType {
 }
 
 class User {
-  name: string;
-  isAdmin: boolean;
-  cart?: string[];
+  protected name: string;
+  protected isAdmin: boolean;
+  protected cart?: string[];
   constructor(name: string) {
     this.name = name;
     this.isAdmin = false;
@@ -37,7 +37,7 @@ class Admin extends User {
 }
 
 export class UserFactory {
-  public static create(name: string, type: UserType) {
+  static create(name: string, type: UserType) {
     switch (type) {
       case UserType.User:
         return new User(name);
