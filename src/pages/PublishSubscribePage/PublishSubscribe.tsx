@@ -1,8 +1,8 @@
 import { Logger } from '../../util';
 
 export class Provider {
-  messageQueue: string[];
-  subscribers: Record<string, Subscriber[]>;
+  protected messageQueue: string[];
+  protected subscribers: Record<string, Subscriber[]>;
   constructor() {
     this.messageQueue = [];
     this.subscribers = {};
@@ -38,7 +38,7 @@ export class Provider {
 }
 
 export class Publisher {
-  provider: Provider;
+  protected provider: Provider;
   constructor(messageCenter: Provider) {
     this.provider = messageCenter;
   }
@@ -49,8 +49,8 @@ export class Publisher {
 }
 
 export class Subscriber {
-  name: string;
-  provider: Provider;
+  protected name: string;
+  protected provider: Provider;
   logger: Logger;
   constructor(name: string, messageCenter: Provider) {
     this.name = name;
