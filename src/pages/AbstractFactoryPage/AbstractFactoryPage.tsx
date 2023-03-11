@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ListLoggerRenderer from '../../util/ListLoggerRenderer';
+import { ListLoggerRenderer } from '../../util';
 import { CatFactory, DogFactory, Petshop } from './AbstractFactory';
 
 const AbstractFactoryPage: FC = () => {

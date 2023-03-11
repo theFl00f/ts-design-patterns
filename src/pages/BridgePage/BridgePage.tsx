@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ListLoggerRenderer from '../../util/ListLoggerRenderer';
+import { ListLoggerRenderer } from '../../util';
 import { CircleShape, DrawingAPI1, DrawingAPI2 } from './Bridge';
 
 const BridgePage: FC = () => {
