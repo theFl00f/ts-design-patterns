@@ -2,10 +2,10 @@ import { FC } from 'react';
 import { Logger, LogRenderer, UnknownError } from '../../util';
 import { Aggregate, ConcreteIterator, IteratorActions } from './Iterator';
 
-const iteratorLog = <Type extends unknown>(
+const iteratorLog = (
   logger: Logger,
-  iterator: ConcreteIterator<Type>,
-  iteratorAction: IteratorActions<Type>
+  iterator: ConcreteIterator<string>,
+  iteratorAction: IteratorActions<string>
 ) => {
   switch (iteratorAction) {
     case 'currentObject':
@@ -28,13 +28,13 @@ const IteratorPage: FC = () => {
 
   const iterator = new ConcreteIterator<string>(aggregate);
 
-  iteratorLog<string>(logger, iterator, 'nextObject');
-  iteratorLog<string>(logger, iterator, 'currentObject');
-  iteratorLog<string>(logger, iterator, 'nextObject');
-  iteratorLog<string>(logger, iterator, 'firstObject');
-  iteratorLog<string>(logger, iterator, 'nextObject');
-  iteratorLog<string>(logger, iterator, 'isDone');
-  iteratorLog<string>(logger, iterator, 'nextObject');
+  iteratorLog(logger, iterator, 'nextObject');
+  iteratorLog(logger, iterator, 'currentObject');
+  iteratorLog(logger, iterator, 'nextObject');
+  iteratorLog(logger, iterator, 'firstObject');
+  iteratorLog(logger, iterator, 'nextObject');
+  iteratorLog(logger, iterator, 'isDone');
+  iteratorLog(logger, iterator, 'nextObject');
 
   return <LogRenderer messages={logger.logs} />;
 };

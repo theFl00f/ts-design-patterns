@@ -52,7 +52,6 @@ export class TeaMaker {
 
   make(preference: TeaType): Tea {
     if (isEmpty(this.availableTea[preference])) {
-      console.log(preference);
       switch (preference) {
         case TeaType.Oolong:
           this.availableTea[preference] = new OolongTea();

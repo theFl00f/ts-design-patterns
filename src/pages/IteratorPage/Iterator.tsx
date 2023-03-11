@@ -1,5 +1,3 @@
-import { AbstractError } from '../../util';
-
 export class Aggregate<Type> {
   items: Type[];
   constructor() {
@@ -12,19 +10,11 @@ export class Aggregate<Type> {
 }
 
 // Abstract class
-export class Iterator<Type> {
-  firstObject(): Type {
-    throw new AbstractError();
-  }
-  nextObject(): Type | null {
-    throw new AbstractError();
-  }
-  currentObject(): Type {
-    throw new AbstractError();
-  }
-  isDone(): boolean {
-    throw new AbstractError();
-  }
+export abstract class Iterator<Type> {
+  abstract firstObject(): Type;
+  abstract nextObject(): Type | null;
+  abstract currentObject(): Type;
+  abstract isDone(): boolean;
 }
 
 export type IteratorActions<Type> = keyof Iterator<Type>;
@@ -33,7 +23,7 @@ export type IteratorActions<Type> = keyof Iterator<Type>;
 export class ConcreteIterator<Type> extends Iterator<Type> {
   private aggregate: Aggregate<Type>;
   private items: Type[];
-  index: number;
+  private index: number;
   constructor(aggregate: Aggregate<Type>) {
     super();
     this.aggregate = aggregate;

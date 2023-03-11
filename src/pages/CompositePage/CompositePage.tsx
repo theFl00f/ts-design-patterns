@@ -2,10 +2,6 @@ import { FC } from 'react';
 import { Logger, LogRenderer } from '../../util';
 import { Employee } from './Composite';
 
-function logEmployee(logger: Logger, employee: Employee) {
-  logger.log(JSON.stringify(employee, null, 2));
-}
-
 const CompositePage: FC = () => {
   const logger = new Logger();
 
@@ -29,8 +25,15 @@ const CompositePage: FC = () => {
   headMarketing.add(clerk1);
   headMarketing.add(clerk2);
 
-  logEmployee(logger, ceo);
-  ceo.subordinates.map((subordinate) => logEmployee(logger, subordinate));
+  logger.log(ceo.toString());
+  ceo.subordinates.map((subordinate1) => {
+    logger.log(`Subordinate to ${ceo.name}:`);
+    logger.log(subordinate1.toString());
+    logger.log(`Subordinates to ${subordinate1.name}:`);
+    subordinate1.subordinates.map((subordinate2) => {
+      logger.log(subordinate2.toString());
+    });
+  });
 
   return <LogRenderer messages={logger.logs} />;
 };

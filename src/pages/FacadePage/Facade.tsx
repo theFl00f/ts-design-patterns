@@ -2,8 +2,8 @@ import { Logger } from '../../util';
 
 export class AbstractFacade {
   logger: Logger;
-  constructor() {
-    this.logger = new Logger();
+  constructor(logger: Logger) {
+    this.logger = logger;
   }
 }
 
@@ -32,20 +32,17 @@ export class LaptopFacade extends AbstractFacade {
 }
 
 export class ComputerFacade extends AbstractFacade {
-  monitor: MonitorFacade;
-  keyboard: KeyboardFacade;
-  mouse: MouseFacade;
-  laptop: LaptopFacade;
+  private monitor: MonitorFacade;
+  private keyboard: KeyboardFacade;
+  private mouse: MouseFacade;
+  private laptop: LaptopFacade;
   constructor() {
-    super();
-    this.monitor = new MonitorFacade();
-    this.keyboard = new KeyboardFacade();
-    this.mouse = new MouseFacade();
-    this.laptop = new LaptopFacade();
-    this.monitor.logger = this.logger;
-    this.keyboard.logger = this.logger;
-    this.mouse.logger = this.logger;
-    this.laptop.logger = this.logger;
+    const logger = new Logger();
+    super(logger);
+    this.monitor = new MonitorFacade(logger);
+    this.keyboard = new KeyboardFacade(logger);
+    this.mouse = new MouseFacade(logger);
+    this.laptop = new LaptopFacade(logger);
   }
 
   buildComputer() {

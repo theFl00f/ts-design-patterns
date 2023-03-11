@@ -1,4 +1,4 @@
-import { AbstractError, Logger } from '../../util';
+import { Logger } from '../../util';
 
 export class Receiver {
   logger: Logger;
@@ -11,17 +11,15 @@ export class Receiver {
 }
 
 // Abstract Command
-export class Command {
+export abstract class Command {
   logger: Logger;
-  receiver: Receiver;
+  protected receiver: Receiver;
   constructor(receiver: Receiver) {
     this.logger = receiver.logger;
     this.receiver = receiver;
   }
 
-  execute(): void {
-    throw new AbstractError();
-  }
+  abstract execute(): void;
 }
 
 // Concrete Commands
@@ -49,7 +47,7 @@ export class ConcreteCommand2 extends Command {
 }
 
 export class Invoker {
-  commands: Command[];
+  private commands: Command[];
   constructor() {
     this.commands = [];
   }

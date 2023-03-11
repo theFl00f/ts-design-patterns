@@ -1,15 +1,13 @@
-import { AbstractError, Logger } from '../../util';
+import { Logger } from '../../util';
 
 // Refined Abstraction
-class DrawingAPI {
+abstract class DrawingAPI {
   logger: Logger;
   constructor() {
     this.logger = new Logger();
   }
 
-  drawCircle(x: Int, y: Int, radius: Float) {
-    throw new AbstractError();
-  }
+  abstract drawCircle(x: Int, y: Int, radius: Float): void;
 }
 
 export class CircleShape {

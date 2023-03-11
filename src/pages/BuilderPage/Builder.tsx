@@ -1,32 +1,22 @@
-import { AbstractError, UndefinedError } from '../../util';
+import { UndefinedError } from '../../util';
 
 // Product
 export class Building {
-  floor: string | null;
-  size: string | null;
-  constructor() {
-    this.floor = null;
-    this.size = null;
-  }
+  floor?: string;
+  size?: string;
+
   toString() {
     return `Floor: ${this.floor} | Size: ${this.size}`;
   }
 }
 
 // Abstract Builder
-export class Builder {
-  building: Building | null;
-  constructor() {
-    this.building = null;
-  }
+export abstract class Builder {
+  building?: Building;
 
-  buildFloor() {
-    throw new AbstractError();
-  }
+  abstract buildFloor(): void;
 
-  buildSize() {
-    throw new AbstractError();
-  }
+  abstract buildSize(): void;
 
   newBuilding() {
     this.building = new Building();
@@ -65,16 +55,13 @@ export class ApartmentBuilder extends Builder {
 // Director
 
 export class Director {
-  builder: Builder | null;
-  constructor() {
-    this.builder = null;
-  }
+  private builder?: Builder;
 
   construct(builder: Builder) {
     this.builder = builder;
   }
 
-  private validateBuilder(builder: Builder | null | undefined) {
+  private validateBuilder(builder?: Builder) {
     if (!(builder instanceof Builder)) {
       throw new UndefinedError('Builder');
     }

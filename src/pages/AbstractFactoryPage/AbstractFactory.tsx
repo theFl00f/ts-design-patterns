@@ -1,13 +1,9 @@
-import { AbstractError, Logger } from '../../util';
+import { Logger } from '../../util';
 
 // Stuff our factory makes
-export class Animal {
-  speak(): string {
-    throw new AbstractError();
-  }
-  toString(): string {
-    throw new AbstractError();
-  }
+export abstract class Animal {
+  abstract speak(): string;
+  abstract toString(): string;
 }
 
 export class Dog extends Animal {
@@ -29,13 +25,9 @@ export class Cat extends Animal {
 }
 
 // Factory classes
-export class AbstractFactory {
-  getPet(): Animal {
-    throw new AbstractError();
-  }
-  getFood(): string {
-    throw new AbstractError();
-  }
+export abstract class AbstractFactory {
+  abstract getPet(): Animal;
+  abstract getFood(): string;
 }
 
 export class DogFactory extends AbstractFactory {
@@ -57,7 +49,7 @@ export class CatFactory extends AbstractFactory {
 }
 
 export class Petshop {
-  petFactory: AbstractFactory;
+  protected petFactory: AbstractFactory;
   logger: Logger;
   constructor(petFactory: AbstractFactory) {
     this.petFactory = petFactory;
