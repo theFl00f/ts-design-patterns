@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { LogRenderer } from '../../util';
+import ListLoggerRenderer from '../../util/ListLoggerRenderer';
 import { CircleShape, DrawingAPI1, DrawingAPI2 } from './Bridge';
 
 const BridgePage: FC = () => {
@@ -11,13 +11,9 @@ const BridgePage: FC = () => {
     shape.scale(2.5);
     shape.draw();
   });
-  return (
-    <div>
-      {shapes.map((shape, index) => (
-        <LogRenderer messages={shape.drawingApi.logger.logs} key={index} />
-      ))}
-    </div>
-  );
+
+  const loggers = shapes.map((shape) => shape.drawingApi.logger);
+  return <ListLoggerRenderer loggers={loggers} label={'drawing-api'} />;
 };
 
 export default BridgePage;
