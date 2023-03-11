@@ -3,7 +3,7 @@ import { LogRenderer } from '../../util';
 import { DBManager, StudentController, StudentView } from './MVC';
 
 const MVCPage: FC = () => {
-  // fetch student record based on his roll number from the database
+  // fetch student record based on their roll number from the database
   const db = new DBManager();
   const model = db.retrieveStudentFromDatabase();
 
