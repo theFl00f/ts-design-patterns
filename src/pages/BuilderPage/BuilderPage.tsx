@@ -6,15 +6,14 @@ const BuilderPage: FC = () => {
   const logger = new Logger();
   const director = new Director();
 
-  director.construct(new HouseBuilder());
-  director.constructBuilding();
-  const house = director.getBuilding();
-  logger.log(house.toString());
+  const builders = [new HouseBuilder(), new ApartmentBuilder()];
 
-  director.construct(new ApartmentBuilder());
-  director.constructBuilding();
-  const apartment = director.getBuilding();
-  logger.log(apartment.toString());
+  builders.map((builder) => {
+    director.construct(builder);
+    director.constructBuilding();
+    const building = director.getBuilding();
+    logger.log(building.toString());
+  });
 
   return <LogRenderer messages={logger.logs} />;
 };
