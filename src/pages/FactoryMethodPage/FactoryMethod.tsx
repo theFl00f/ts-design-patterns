@@ -1,15 +1,13 @@
-import { InterfaceError, Logger, UnknownError } from '../../util';
+import { Logger, UnknownError } from '../../util';
 
 // Defined Interface
-export class Shape {
+export abstract class Shape {
   logger: Logger;
   constructor() {
     this.logger = new Logger();
   }
 
-  draw() {
-    throw new InterfaceError();
-  }
+  abstract draw(): void;
 }
 
 // Concrete Implementors
